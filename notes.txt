@@ -1,0 +1,24 @@
+PostGreSql commands to start
+
+brew services start postgresql@15
+brew link postgresql@15 --force
+
+
+createdb => for creating database of local machine username
+After this, run => psql => to go to psql terminal 
+When above commands work, it will open the psql terminal. Now to go to our database, run below command:  \c socialmedia;
+
+socialmedia is the name of my database here and \c is for changing database. 
+
+
+This is for initializing psql:
+
+const pool = new pg.Pool({
+  user: 'aayush',
+  host: 'localhost',
+  database: 'socialmedia',
+  password: 'test',
+  port: 5432,
+});
+
+I used env files for this in this project
